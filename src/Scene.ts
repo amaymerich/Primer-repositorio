@@ -24,7 +24,7 @@ export class Scene extends Container
           const Buttons: gameButtons = new gameButtons();
           this.addChild(Buttons);
 
-          const text: Text = new Text ("YOU WIN!", {fontSize: 70, fontFamily: "Arial", fill: "white"});
+          const text: Text = new Text ("YOU WIN!", {fontSize: 71, fontFamily: "Arial", fill: "white"});
           text.position.set(490,95);
           this.addChild(text);
     }
