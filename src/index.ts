@@ -1,14 +1,16 @@
-import { Application, Container, Loader, Point, Sprite } from 'pixi.js'
-
-const app = new Application({
+import { Application, Loader } from 'pixi.js'
+import { assets } from './Assets';
+import { Scene } from './Scene';
+//Aplicaion de pxi que renderiza por nosotros
+const app = new Application({ 
 	view: document.getElementById("pixi-canvas") as HTMLCanvasElement,
 	resolution: window.devicePixelRatio || 1,
 	autoDensity: true,
 	backgroundColor: 0x6495ed,
-	width: 640,
-	height: 480
+	width: 1280,
+	height: 720
 });
-
+//Acomoda la pantalla
 window.addEventListener("resize", ()=>{
 	const scalex = window.innerWidth/app.screen.width;
 	const scaley = window.innerHeight / app.screen.height;
@@ -32,36 +34,11 @@ window.addEventListener("resize", ()=>{
 
 window.dispatchEvent(new Event("resize"));
 
-Loader.shared.add({url: "./minion-handball.png",name: "myMinion"});
-Loader.shared.add({url: "./ball-Handball.png",name: "ball"});
+Loader.shared.add(assets);
 
 Loader.shared.onComplete.add(()=>{
-
-	const minion: Sprite = Sprite.from("myMinion");
-	
-	minion.position.set(100,100);
-	minion.scale.set(0.5,0.5);
-
-	const ball: Sprite= Sprite.from("ball");
-
-	ball.scale.set(0.08,0.08);
-	ball.position.set(95,70);
-
-	const minionWidthBall: Container = new Container();
-	
-	minionWidthBall.addChild(ball);
-	minionWidthBall.addChild(minion);
-	
-	minionWidthBall.scale.set(1);
-	minionWidthBall.x=250;
-	minionWidthBall.y=170;
-	minionWidthBall.angle=30;
-
-	console.log(ball.toGlobal(new Point()));
-	console.log(ball.parent.toGlobal(ball.position));
-
-app.stage.addChild(minionWidthBall);
-	
+	const myScene= new Scene();
+	app.stage.addChild(myScene);
 });
 
 Loader.shared.load();
