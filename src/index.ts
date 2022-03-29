@@ -1,6 +1,6 @@
 import { Application, Loader } from 'pixi.js'
 import { assets } from './Assets';
-import { Scene } from './Scene';
+import { Scene } from './scenes.ts/Scene';
 //Aplicaion de pxi que renderiza por nosotros
 const app = new Application({ 
 	view: document.getElementById("pixi-canvas") as HTMLCanvasElement,

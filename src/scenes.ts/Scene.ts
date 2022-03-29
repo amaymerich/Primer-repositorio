@@ -1,8 +1,8 @@
 import { Container, Text} from "pixi.js";
-import { gameBoard } from "./Board";
-import { gameBackground } from "./gameBackground";
-import { gameButtons } from "./gameButtons";
-import { gameInfo } from "./gameInfo";
+import { gameBoard } from "../UIDemo/Board";
+import { gameBackground } from "../UIDemo/gameBackground";
+import { gameButtons } from "../UIDemo/UIDemo";
+import { gameInfo } from "../UIDemo/gameInfo";
 
 
 
