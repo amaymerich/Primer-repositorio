@@ -1,6 +1,6 @@
-import { Application, Loader } from 'pixi.js'
+import { Application, Loader, Ticker } from 'pixi.js'
 import { assets } from './Assets';
-import { Scene } from './scenes.ts/Scene';
+import { TickerScene } from './scenes.ts/TickerScene';
 //Aplicaion de pxi que renderiza por nosotros
 const app = new Application({ 
 	view: document.getElementById("pixi-canvas") as HTMLCanvasElement,
@@ -37,8 +37,12 @@ window.dispatchEvent(new Event("resize"));
 Loader.shared.add(assets);
 
 Loader.shared.onComplete.add(()=>{
-	const myScene= new Scene();
+	const myScene= new TickerScene();
 	app.stage.addChild(myScene);
+	
+	Ticker.shared.add(function(deltaFrame){
+		myScene.update(Ticker.shared.deltaMS,deltaFrame)
+	})
 	
 });
 

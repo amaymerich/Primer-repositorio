@@ -7,7 +7,7 @@ export class Keyboard {
 
   public static readonly down: utils.EventEmitter = new utils.EventEmitter();
   public static readonly up: utils.EventEmitter = new utils.EventEmitter();
-  
+
   private constructor() {} // So you cant make `new Keyboard()`
 
   private static initialized: boolean = false;
@@ -31,4 +31,4 @@ export class Keyboard {
 
     Keyboard.state.set(e.code, false);
   }
-}
+} 
