@@ -2,13 +2,17 @@ import { Application, Loader, Ticker } from 'pixi.js'
 import { assets } from './Assets';
 import { TickerScene } from './scenes.ts/TickerScene';
 //Aplicaion de pxi que renderiza por nosotros
+
+export const WIDTH=1920;
+export const HEIGHT=1080;
+
 const app = new Application({ 
 	view: document.getElementById("pixi-canvas") as HTMLCanvasElement,
 	resolution: window.devicePixelRatio || 1,
 	autoDensity: true,
 	backgroundColor: 0x6495ed,
-	width: 1280,
-	height: 720
+	width: WIDTH,
+	height: HEIGHT,
 });
 //Acomoda la pantalla
 window.addEventListener("resize", ()=>{
