@@ -1,78 +1,92 @@
-import { AnimatedSprite, Container, Texture} from "pixi.js";
-import { PhysicsContainer } from "../game/PhysicsConyainer";
+import { Container, Texture, TilingSprite} from "pixi.js";
+import { HEIGHT, WIDTH } from "..";
+import { checkCollision } from "../game/IHitbox";
+import { Platform } from "../game/Platform";
+import { Player } from "../game/Player";
 import { IUpdateable } from "./IUpdateable";
+
 
 
 export class TickerScene extends Container implements IUpdateable
 {
-    private ninjaAnimated: AnimatedSprite;
-    private physNinja: PhysicsContainer;
+    private playerNinja: Player;
     
+    private platforms:Platform[];
+
+    private world:Container;
+    private background: TilingSprite;
+
     constructor()
     {
         super();
-   
-        this.ninjaAnimated = new AnimatedSprite
-        (
-            [
-                Texture.from("dvd"),
-              
-            ],
-            false
-        );
-        this.ninjaAnimated.scale.set(0.4);
-        this.ninjaAnimated.position.set(150,230);
-        this.ninjaAnimated.play();
-        this.ninjaAnimated.anchor.set(0.5,1);
-        this.ninjaAnimated.animationSpeed=0.5;
+        this.playerNinja = new Player();
+        this.addChild(this.playerNinja);       
 
-        this.physNinja= new PhysicsContainer();
-        this.physNinja.speed.x = 400;
-        this.physNinja.speed.y = 0;
-        this.physNinja.acceleration.y=70;
-        this.addChild(this.physNinja);
 
-        this.physNinja.addChild(this.ninjaAnimated);
-        
+        this.world = new Container();
+
+        this.background = new TilingSprite(Texture.from("F1"), WIDTH, HEIGHT);
+        this.addChild(this.background);
+
+        this.platforms = [];
+
+        let plat = new Platform()
+        plat.position.set(150,700);
+        this.world.addChild(plat);
+        this.platforms.push(plat);
+
+        plat = new Platform()
+        plat.position.set(1000,600);
+        this.world.addChild(plat);
+        this.platforms.push(plat);
+
+        plat = new Platform()
+        plat.position.set(1800,500);
+        this.world.addChild(plat);
+        this.platforms.push(plat);
+
+        plat = new Platform()
+        plat.position.set(-500,700);
+        this.world.addChild(plat);
+        this.platforms.push(plat);
+
+        this.playerNinja = new Player();
+        this.playerNinja.x = 300;
+        this.playerNinja.y = 300;
+        this.world.addChild(this.playerNinja);
+
+        this.addChild(this.world);
+
     }
 
-    public update(deltaTime:number, deltaFrame: number): void {
-        this.ninjaAnimated.update(deltaFrame);//actualiza animacion
-        //craftea delta del tiempo en segundos
-        const dt = deltaTime/1000;
-         //Actualizaciones físicas
-        this.physNinja.update(dt);
+    public update(deltaTime:number, _deltaFrame: number): void {
+
+        this.playerNinja.update(deltaTime);//actualiza animacion
+      
+        for (let platform of this.platforms) 
+        {
+            const overlap = checkCollision(this.playerNinja, platform);
+            if (overlap != null)
+            {
+                this.playerNinja.separate(overlap, platform.position);
+            }
+        }
+
        //Límite horizontal
-        if(this.physNinja.x>1600)
+        if(this.playerNinja.x>WIDTH)
         {
             //límite derecha
-            this.physNinja.x=1600;
-            this.physNinja.speed.x= Math.abs(this.physNinja.speed.x)*-1;
-            
-            this.ninjaAnimated.tint=0xFF00FF;
-
-        }else if (this.physNinja.x<0){
+            this.playerNinja.x=WIDTH;            
+        }else if (this.playerNinja.x<0)
+        {
             //límite izquierda 
-            this.physNinja.x=0;
-            this.physNinja.speed.x=Math.abs(this.physNinja.speed.x);
-            this.ninjaAnimated.tint=0xFF0000;
+            this.playerNinja.x=0;
         }
         //límite vertical
-        if(this.physNinja.y>850)
+       /* if(this.playerNinja.y> HEIGHT)
         {
             //abajo
-            this.physNinja.y=850;
-            this.physNinja.speed.y= Math.abs(this.physNinja.speed.y)*-1;
-            this.ninjaAnimated.tint=0x00FF00;
-
-        }else if (this.physNinja.y<50){
-            //arriba
-            this.physNinja.y=50;
-            this.physNinja.speed.y=Math.abs(this.physNinja.speed.y);
-            this.ninjaAnimated.tint=0x6495ed;
-        }
-      
-        
-    }
-
-}
+            this.playerNinja.y=HEIGHT; 
+            this.playerNinja.canJump=true;           
+        }*/
+}}

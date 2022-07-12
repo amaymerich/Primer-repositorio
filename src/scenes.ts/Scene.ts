@@ -1,33 +1,24 @@
-import { AnimatedSprite, Container, Texture} from "pixi.js";
-
-
+import { AnimatedSprite, Container, Texture } from "pixi.js";
 
 export class Scene extends Container
 {
+    private platform: AnimatedSprite;
     constructor()
     {
         super();
-   
-        const ninjaAnimated: AnimatedSprite = new AnimatedSprite
-        (
+        this.platform = new AnimatedSprite
+         (
             [
-                Texture.from("N_Run"),
-                Texture.from("N_Run1"),
-                Texture.from("N_Run2"),
-                Texture.from("N_Run3"),
-                Texture.from("N_Run4"),
-                Texture.from("N_Run5"),
-                Texture.from("N_Run6"),
-                Texture.from("N_Run7"),
-                Texture.from("N_Run8"),
-                Texture.from("N_Run9")
-
+                Texture.from("F1"),
+                Texture.from("F2"),
+                Texture.from("F3"),
+                Texture.from("F4"), 
             ],
             true
-        );
-        ninjaAnimated.play();
-        ninjaAnimated.animationSpeed=0.35;
-        this.addChild(ninjaAnimated);
-    
-	}
+         );
+         this.platform.play();
+         this.platform.scale.set(1);
+         this.platform.position.set(500,500);
+         this.addChild(this.platform);
+    }
 }

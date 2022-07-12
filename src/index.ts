@@ -1,8 +1,9 @@
 import { Application, Loader, Ticker } from 'pixi.js'
 import { assets } from './Assets';
 import { TickerScene } from './scenes.ts/TickerScene';
-//Aplicaion de pxi que renderiza por nosotros
+import { Keyboard } from './UIDemo/Keyboard';
 
+//Aplicaion de pxi que renderiza por nosotros
 export const WIDTH=1920;
 export const HEIGHT=1080;
 
@@ -10,25 +11,28 @@ const app = new Application({
 	view: document.getElementById("pixi-canvas") as HTMLCanvasElement,
 	resolution: window.devicePixelRatio || 1,
 	autoDensity: true,
-	backgroundColor:0x000000,
+	backgroundColor:0x6495ed,
 	width: WIDTH,
 	height: HEIGHT,
 });
+Keyboard.initialize();
+
+
 //Acomoda la pantalla
 window.addEventListener("resize", ()=>{
 	const scalex = window.innerWidth/app.screen.width;
 	const scaley = window.innerHeight / app.screen.height;
 	const scale= Math.min(scalex,scaley);
-
+	
 	const gamewidth = Math.round(app.screen.width * scale);
 	const gameheight =  Math.round(app.screen.height * scale);
-
+	
 	const marginHorizontal = Math.floor((window.innerWidth - gamewidth)/2);
 	const marginVertical = Math.floor((window.innerHeight - gameheight)/2);
-
+	
 	app.view.style.width = gamewidth+ "px";
 	app.view.style.height = gameheight + "px";
-
+	
 	app.view.style.marginLeft = marginHorizontal +"px";
 	app.view.style.marginRight = marginHorizontal +"px";
 
@@ -49,5 +53,4 @@ Loader.shared.onComplete.add(()=>{
 	})
 	
 });
-
 Loader.shared.load();
