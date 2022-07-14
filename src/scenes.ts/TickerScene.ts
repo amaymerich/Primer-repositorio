@@ -16,13 +16,17 @@ export class TickerScene extends Container implements IUpdateable
     private world:Container;
     private background: TilingSprite;
 
+    private gameSpeed:number=300;
+
+    private timePassed:number=0;
+
     constructor()
     {
         super();
         this.playerNinja = new Player();
         this.addChild(this.playerNinja);       
 
-
+        //pegamos al mundo lo que queremos que se mueva 
         this.world = new Container();
 
         this.background = new TilingSprite(Texture.from("F1"), WIDTH, HEIGHT);
@@ -59,18 +63,43 @@ export class TickerScene extends Container implements IUpdateable
 
     }
 
-    public update(deltaTime:number, _deltaFrame: number): void {
+    public update(deltaTime:number, _deltaFrame: number): void 
+    {
+        this.timePassed+= deltaTime;
+
+        if(this.timePassed> (7000*100/this.gameSpeed))
+        {
+            this.gameSpeed += 50;
+            this.timePassed=0;
+            const plat = new Platform()
+            plat.position.set(WIDTH,Math.random()*900);
+            this.world.addChild(plat);
+            this.platforms.push(plat);
+        }
+        
 
         this.playerNinja.update(deltaTime);//actualiza animacion
       
         for (let platform of this.platforms) 
         {
+            platform.speed.x=-this.gameSpeed;
+            platform.update(deltaTime/1000);
             const overlap = checkCollision(this.playerNinja, platform);
             if (overlap != null)
             {
                 this.playerNinja.separate(overlap, platform.position);
             }
+
+            if(platform.getHitbox().right<0)
+            {
+                platform.destroy();
+            }
         }
+
+
+        this.platforms=this.platforms.filter((elem)=>!elem.destroyed);
+        console.log(this.platforms.length);
+        this.background.tilePosition.x-=this.gameSpeed*deltaTime/1000;
 
        //Límite horizontal
         if(this.playerNinja.x>WIDTH)
@@ -89,4 +118,13 @@ export class TickerScene extends Container implements IUpdateable
             this.playerNinja.y=HEIGHT; 
             this.playerNinja.canJump=true;           
         }*/
-}}
+
+        //Línea que mueve el mundo
+       // this.world.x= - this.playerNinja.x*this.worldTransform.a + WIDTH/4;
+        this.background.tilePosition.x -= this.gameSpeed * deltaTime/100;
+
+        //this.world.y= - this.playerNinja.y*this.worldTransform.d + HEIGHT/2;
+        //this.background.tilePosition.y=this.world.y*0.5;
+    
+    }
+}

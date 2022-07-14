@@ -6,7 +6,9 @@ import { PhysicsContainer } from "./PhysicsConyainer";
 export class Player extends PhysicsContainer implements IHitbox
 {
     private static readonly GRAVITY=350;
-    private static readonly MOVE_SPEED=350;
+    private static readonly MOVE_SPEED=0;
+
+    private static readonly JUMP_SPEED = 700;
     public canJump= true;
     private PlayerNinja: AnimatedSprite;
     private hitbox: Graphics;
@@ -32,8 +34,8 @@ export class Player extends PhysicsContainer implements IHitbox
             ],
             false
         );
-        this.PlayerNinja.scale.set(0.6);
-        this.PlayerNinja.position.set(0,0);
+        this.PlayerNinja.scale.set(0.4);
+        this.PlayerNinja.position.set(300,0);
         this.PlayerNinja.play();
         this.PlayerNinja.anchor.set(0.5,1);
         this.PlayerNinja.animationSpeed=0.2;
@@ -72,13 +74,21 @@ export class Player extends PhysicsContainer implements IHitbox
         if (Keyboard.state.get("ArrowRight"))
         {
             this.speed.x = Player.MOVE_SPEED;  
-            this.PlayerNinja.scale.x=0.6;
+            this.PlayerNinja.scale.x=0.4;
         }else if (Keyboard.state.get("ArrowLeft"))
         {
             this.speed.x=-Player.MOVE_SPEED;
-            this.PlayerNinja.scale.x=-0.6;
+            this.PlayerNinja.scale.x=-0.4;
         }else{
             this.speed.x=0;
+        }
+
+        if (Keyboard.state.get("ArrowDown"))
+        {
+            this.acceleration.y=Player.GRAVITY*5;
+        }else
+        {
+            this.acceleration.y=Player.GRAVITY;
         }
         
    }
@@ -86,7 +96,7 @@ export class Player extends PhysicsContainer implements IHitbox
    {if(this,this.canJump)
     {
         this.canJump=false;
-        this.speed.y=-550;
+        this.speed.y=-Player.JUMP_SPEED;
     }}
 
     public getHitbox(): Rectangle
