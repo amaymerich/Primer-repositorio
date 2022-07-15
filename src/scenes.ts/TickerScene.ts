@@ -16,7 +16,7 @@ export class TickerScene extends Container implements IUpdateable
     private world:Container;
     private background: TilingSprite;
 
-    private gameSpeed:number=300;
+    private gameSpeed:number=0;//300
 
     private timePassed:number=0;
 
