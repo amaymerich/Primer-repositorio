@@ -20,12 +20,14 @@ export class Button extends Container
         this.spr = Sprite.from(def);
         this.spr.anchor.set(0.5);
         this.addChild(this.spr);
+
         this.spr.interactive = true;
         this.spr.on("pointerdown", this.onMouseDown, this)
         this.spr.on("pointerup", this.onMouseUp, this)
         this.spr.on("pointerover", this.onMouseOver, this);
         this.spr.on("pointerout", this.onMouseOut, this);
     }
+    
     private onMouseDown():void {
         this.spr.texture = this.down;
     }

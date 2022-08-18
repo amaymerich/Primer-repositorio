@@ -1,6 +1,6 @@
 export const assets=
 [
-
+/*
     {url: "./NinjaAdventure/Run_ninja/Run__000.png",name: "N_Run"},
     {url: "./NinjaAdventure/Run_ninja/Run__001.png",name: "N_Run1"},
     {url: "./NinjaAdventure/Run_ninja/Run__002.png",name: "N_Run2"},
@@ -15,14 +15,14 @@ export const assets=
     {url: "./Platform/Tiles/BGTile (4).png",name: "F2"},
     {url: "./Platform/Tiles/BGTile (3).png",name: "F3"},
     {url: "./Platform/Tiles/BGTile (5).png",name: "F4"},
-    {url: "./Platform/Tiles/Tile (15).png",name: "Platform"},
+    {url: "./Platform/Tiles/Tile (15).png",name: "Platform"},*/
     {url: "./PNG/White/2x/musicOff.png",name: "musicOff"},
     {url: "./PNG/White/2x/musicOn.png",name: "musicOn"},
     {url: "./PNG/White/2x/minus.png",name: "minus"},
     {url: "./PNG/White/2x/plus.png",name: "plus"},
     
-    
-    
+    {url: "./Music/Desert Brawl - Vans in Japan.mp3",name: "sound"}
+        
 
 ];
 

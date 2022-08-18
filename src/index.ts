@@ -1,6 +1,7 @@
 import { Application, Loader, Ticker } from 'pixi.js'
 import { assets } from './Assets';
-import { TickerScene } from './scenes.ts/TickerScene';
+import { SoundScene } from './scenes.ts/SoundScene';
+//import { TickerScene } from './scenes.ts/TickerScene';
 import { Keyboard } from './UIDemo/Keyboard';
 
 //Aplicaion de pxi que renderiza por nosotros
@@ -16,6 +17,8 @@ const app = new Application({
 	height: HEIGHT,
 });
 Keyboard.initialize();
+
+
 
 
 //Acomoda la pantalla
@@ -45,12 +48,13 @@ window.dispatchEvent(new Event("resize"));
 Loader.shared.add(assets);
 
 Loader.shared.onComplete.add(()=>{
-	const myScene= new TickerScene();
+	//const myScene= new TickerScene();
+	const myScene = new SoundScene();
 	app.stage.addChild(myScene);
 	
-	Ticker.shared.add(function(deltaFrame){
-		myScene.update(Ticker.shared.deltaMS,deltaFrame)
-	})
-	
+	Ticker.shared.add(function (deltaFrame){
+		myScene.update(Ticker.shared.deltaMS, deltaFrame);
+	});
 });
+
 Loader.shared.load();

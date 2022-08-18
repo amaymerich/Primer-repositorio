@@ -1,7 +1,6 @@
 import { sound } from "@pixi/sound";
 import { Container, Texture } from "pixi.js";
 import { Button } from "../ui/Button";
-import { ToggleButton } from "../ui/ToggleButton";
 import { IUpdateable } from "./IUpdateable";
 
 
@@ -11,52 +10,59 @@ export class SoundScene extends Container implements IUpdateable {
     {
         super();
 
+        sound.play("sound")
+
         const allCont = new Container();
         this.addChild(allCont);
         allCont.scale.set(3);
 
-        const btnSword = new Button(Texture.from("Button Sword"));
-        btnSword.position.set(200,200);
-        btnSword.on(Button.CLICKED_EVENT, this.swordSound, this);
-        allCont.addChild(btnSword);
-
-        const btnVolumeUp = new Button(Texture.from("Button Plus"));
+        const btnMusicOn = new Button(Texture.from("musicOn"));
+        btnMusicOn.position.set(200,150);
+        btnMusicOn.on(Button.CLICKED_EVENT, this.musicSound, this);
+        allCont.addChild(btnMusicOn);
+          
+        const btnVolumeUp = new Button(Texture.from("plus"));
         btnVolumeUp.position.set(400,150);
         btnVolumeUp.on(Button.CLICKED_EVENT, this.volumeUp, this);
         allCont.addChild(btnVolumeUp);
-        const btnVolumeDown = new Button(Texture.from("Button Minus"));
+       
+        const btnVolumeDown = new Button(Texture.from("minus"));
         btnVolumeDown.position.set(400,250);
         btnVolumeDown.on(Button.CLICKED_EVENT, this.volumeDown, this);
         allCont.addChild(btnVolumeDown);
 
-        const toggleMute = new ToggleButton(Texture.from("Button Music On"), Texture.from("Button Music Off"));
-        toggleMute.position.set(500,200);
-        toggleMute.on(ToggleButton.TOGGLE_EVENT, this.toggleMute, this);
+        const toggleMute = new Button(Texture.from("musicOn"), Texture.from("musicOff"));
+        toggleMute.position.set(200,250);
+        toggleMute.on(Button.CLICKED_EVENT, this.toggleMute, this);
         allCont.addChild(toggleMute);
     }
-    public toggleMute(unMute:boolean) {
-        if (unMute) 
+    public toggleMute(_mute:boolean) {
+        /*if (unMute) 
         {
             sound.unmuteAll();
         }else
         {
             sound.muteAll();
-        }
+        }*/ sound.toggleMuteAll();
     }
-    public volumeDown() {
+    public volumeDown() 
+    {
         sound.volumeAll -= 0.05;
         console.log("new volume", sound.volumeAll)
     }
-    public volumeUp() {
+    public volumeUp() 
+    {
         sound.volumeAll += 0.05;
         console.log("new volume", sound.volumeAll)
     }
-    public swordSound() {
-        sound.play("Woosh", {
+    public musicSound() 
+    {
+        sound.play("musicOn", 
+        {
             loop:true, 
             volume: 0.5,
             singleInstance:true,
-            });
+        });
     }
 
     public update(_deltaTime: number, _deltaFrame: number): void {

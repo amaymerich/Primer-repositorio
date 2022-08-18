@@ -40,7 +40,7 @@ export class Player extends PhysicsContainer implements IHitbox
         this.PlayerNinja.anchor.set(0.5,1);
         this.PlayerNinja.animationSpeed=0.2;
         
-        this.addChild(this.PlayerNinja);
+        //this.addChild(this.PlayerNinja);
 
         const auxZero= new Graphics();
         auxZero.beginFill(0xFF00FF);

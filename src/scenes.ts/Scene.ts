@@ -1,5 +1,6 @@
 import { AnimatedSprite, Container, Texture } from "pixi.js";
 
+
 export class Scene extends Container
 {
     private platform: AnimatedSprite;

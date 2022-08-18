@@ -59,7 +59,7 @@ export class TickerScene extends Container implements IUpdateable
         this.playerNinja.y = 300;
         this.world.addChild(this.playerNinja);
 
-        this.addChild(this.world);
+       this.addChild(this.world);
 
     }
 

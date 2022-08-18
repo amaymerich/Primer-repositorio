@@ -1,19 +1,28 @@
-import { Container, Sprite, Texture, Text} from "pixi.js";
+import { Container, Sprite, Text, Texture} from "pixi.js";
+import { Buttons } from "./gameButtons";
+import { Keyboard } from "./Keyboard";
 
 export class gameButtons extends Container{
+    private buttonMenu: Buttons;
     private lastKeyPressed:Text;
 
     constructor()
     {
         super();
 
-        const musicOff: Sprite = Sprite.from("musicOff");
-        musicOff.scale.set(3.2);
-        musicOff.position.set(600,525);
-        musicOff.on("touchstart",this.onTouchStart,this);
-        musicOff.on("touchend",this.onTouchEnd,this);
-        musicOff.interactive=true;
-        this.addChild(musicOff);
+        this.buttonMenu= new Buttons (Texture.from("musicOff"),Texture.from("musicOn"),Texture.from("plus"),this.onButtonClick.bind(this));
+        this.buttonMenu.on("buttonClick",this.onButtonClick);
+
+        this.buttonMenu.interactive=true;
+        this.addChild(this.buttonMenu);
+
+        const musicoff: Sprite = Sprite.from("musicOff");
+        musicoff.scale.set(3.2);
+        musicoff.position.set(600,525);
+        musicoff.on("touchstart",this.onTouchStart,this);
+        musicoff.on("touchend",this.onTouchEnd,this);
+        musicoff.interactive=true;
+        this.addChild(musicoff);
 
         const musicOn: Sprite = Sprite.from("musicOn");
         musicOn.scale.set(3.2);
@@ -31,13 +40,13 @@ export class gameButtons extends Container{
         plus.interactive=true;
         this.addChild(plus);
 
-        const minus: Sprite = Sprite.from("minus");
+     /*   const minus: Sprite = Sprite.from("minus");
         minus.scale.set(3.2);
         minus.position.set(740,525);
         minus.on("touchstart",this.onTouchStart,this);
         minus.on("touchend",this.onTouchEnd,this);
         minus.interactive=true;
-        this.addChild(minus);
+        this.addChild(minus);*/
 
         this.lastKeyPressed = new Text ("Waiting...",{fontSize: 48});
         this.lastKeyPressed.anchor.set(3.2);
@@ -45,10 +54,17 @@ export class gameButtons extends Container{
         this.addChild(this.lastKeyPressed);
     }
            
-        private onTouchStart():void{  
+        private onButtonClick():void
+        {
+            console.log("My new button clicked!", Keyboard.state.get("KeyA"));
+        }
+        
+        private onTouchStart():void
+        {  
             console.log("touch down");
         }
-        private onTouchEnd():void{  
+        private onTouchEnd():void
+        {  
             console.log("touch up");
         }
           
