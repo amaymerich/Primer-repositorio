@@ -1,7 +1,6 @@
-import { WebfontLoaderPlugin } from 'pixi-webfont-loader';
-import { Application, BitmapFont, Loader, TextStyle, Ticker } from 'pixi.js'
+import { Application, Loader} from 'pixi.js'
 import { assets } from './Assets';
-import { TextScene } from './scenes.ts/TextScene';
+import { SpritesheetScene } from './scenes.ts/SpritesheetScene';
 import { Keyboard } from './UIDemo/Keyboard';
 
 //Aplicaion de pxi que renderiza por nosotros
@@ -43,11 +42,11 @@ window.addEventListener("resize", ()=>{
 
 window.dispatchEvent(new Event("resize"));
 
-Loader.registerPlugin(WebfontLoaderPlugin);
+//Loader.registerPlugin(WebfontLoaderPlugin);
 
 Loader.shared.add(assets);
 
-Loader.shared.onComplete.add(()=>{
+/*Loader.shared.onComplete.add(()=>{
 	// crear fuentes bitmap
 	const aux = new TextStyle({
 		fontSize: 15,
@@ -57,17 +56,20 @@ Loader.shared.onComplete.add(()=>{
 		stroke: "#15be09",
 		fontFamily: "br",
 	})
-	BitmapFont.from("Mi BitmapFont",aux,{chars:BitmapFont.ASCII});
+	BitmapFont.from("Mi BitmapFont",aux,{chars:BitmapFont.ASCII});*/
 	
 	//const myScene= new TickerScene();
 	//const myScene = new SoundScene();
+	//const myScene = new TextScene();
+	//app.stage.addChild(myScene);
 
-	const myScene = new TextScene();
-	app.stage.addChild(myScene);
+	Loader.shared.onComplete.add(()=>{
+		const myScene = new SpritesheetScene();
 
-	Ticker.shared.add(function (){
-		myScene.update();
-	});
+		app.stage.addChild(myScene);
+		/*Ticker.shared.add(function (deltaFrame){
+			myScene.update(Ticker.shared.deltaMS, deltaFrame);
+		});*/
 	
 });
 

@@ -1,0 +1,735 @@
+{
+  "frames": {
+    "Ninja/Dead/Dead__001.png": {
+      "frame": {
+        "x": 2,
+        "y": 2,
+        "w": 264,
+        "h": 433
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8,
+        "y": 43,
+        "w": 264,
+        "h": 433
+      },
+      "sourceSize": {
+        "w": 482,
+        "h": 498
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Ninja/Jump/Jump__002.png": {
+      "frame": {
+        "x": 2,
+        "y": 439,
+        "w": 253,
+        "h": 433
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 44,
+        "y": 19,
+        "w": 253,
+        "h": 433
+      },
+      "sourceSize": {
+        "w": 362,
+        "h": 483
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Ninja/Jump/Jump__003.png": {
+      "frame": {
+        "x": 2,
+        "y": 876,
+        "w": 253,
+        "h": 432
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 43,
+        "y": 19,
+        "w": 253,
+        "h": 432
+      },
+      "sourceSize": {
+        "w": 362,
+        "h": 483
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Ninja/Attack/Attack__009.png": {
+      "frame": {
+        "x": 2,
+        "y": 1312,
+        "w": 381,
+        "h": 430
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 42,
+        "y": 24,
+        "w": 381,
+        "h": 430
+      },
+      "sourceSize": {
+        "w": 536,
+        "h": 495
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Ninja/Jump_Attack/Jump_Attack__002.png": {
+      "frame": {
+        "x": 2,
+        "y": 1746,
+        "w": 299,
+        "h": 408
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 31,
+        "y": 21,
+        "w": 299,
+        "h": 408
+      },
+      "sourceSize": {
+        "w": 504,
+        "h": 522
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Ninja/Dead/Dead__002.png": {
+      "frame": {
+        "x": 414,
+        "y": 1312,
+        "w": 334,
+        "h": 430
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 11,
+        "y": 67,
+        "w": 334,
+        "h": 430
+      },
+      "sourceSize": {
+        "w": 482,
+        "h": 498
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Ninja/Dead/Dead__004.png": {
+      "frame": {
+        "x": 414,
+        "y": 1746,
+        "w": 417,
+        "h": 298
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 18,
+        "y": 180,
+        "w": 417,
+        "h": 298
+      },
+      "sourceSize": {
+        "w": 482,
+        "h": 498
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Ninja/Jump_Throw/Jump_Throw__000.png": {
+      "frame": {
+        "x": 835,
+        "y": 1746,
+        "w": 297,
+        "h": 415
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 50,
+        "y": 16,
+        "w": 297,
+        "h": 415
+      },
+      "sourceSize": {
+        "w": 360,
+        "h": 431
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Ninja/Jump_Attack/Jump_Attack__001.png": {
+      "frame": {
+        "x": 1254,
+        "y": 1746,
+        "w": 296,
+        "h": 411
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 34,
+        "y": 18,
+        "w": 296,
+        "h": 411
+      },
+      "sourceSize": {
+        "w": 504,
+        "h": 522
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Ninja/Dead/Dead__003.png": {
+      "frame": {
+        "x": 1669,
+        "y": 2,
+        "w": 377,
+        "h": 368
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 26,
+        "y": 121,
+        "w": 377,
+        "h": 368
+      },
+      "sourceSize": {
+        "w": 482,
+        "h": 498
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Ninja/Slide/Slide__000.png": {
+      "frame": {
+        "x": 1669,
+        "y": 374,
+        "w": 364,
+        "h": 343
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8,
+        "y": 3,
+        "w": 364,
+        "h": 343
+      },
+      "sourceSize": {
+        "w": 373,
+        "h": 351
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Ninja/Slide/Slide__001.png": {
+      "frame": {
+        "x": 1669,
+        "y": 721,
+        "w": 362,
+        "h": 343
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 10,
+        "y": 3,
+        "w": 362,
+        "h": 343
+      },
+      "sourceSize": {
+        "w": 373,
+        "h": 351
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Ninja/Slide/Slide__009.png": {
+      "frame": {
+        "x": 1669,
+        "y": 1068,
+        "w": 362,
+        "h": 343
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 10,
+        "y": 3,
+        "w": 362,
+        "h": 343
+      },
+      "sourceSize": {
+        "w": 373,
+        "h": 351
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Ninja/Run/Run__005.png": {
+      "frame": {
+        "x": 752,
+        "y": 1415,
+        "w": 326,
+        "h": 425
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 34,
+        "y": 15,
+        "w": 326,
+        "h": 425
+      },
+      "sourceSize": {
+        "w": 363,
+        "h": 458
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Ninja/Run/Run__009.png": {
+      "frame": {
+        "x": 1181,
+        "y": 1415,
+        "w": 326,
+        "h": 420
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 34,
+        "y": 15,
+        "w": 326,
+        "h": 420
+      },
+      "sourceSize": {
+        "w": 363,
+        "h": 458
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Ninja/Jump_Throw/Jump_Throw__007.png": {
+      "frame": {
+        "x": 1605,
+        "y": 1415,
+        "w": 321,
+        "h": 400
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 35,
+        "y": 17,
+        "w": 321,
+        "h": 400
+      },
+      "sourceSize": {
+        "w": 360,
+        "h": 431
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Platform/Tiles/BGTile (2).png": {
+      "frame": {
+        "x": 1669,
+        "y": 1740,
+        "w": 256,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Ninja/Glide/Glide_004.png": {
+      "frame": {
+        "x": 259,
+        "y": 439,
+        "w": 410,
+        "h": 427
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 14,
+        "w": 410,
+        "h": 427
+      },
+      "sourceSize": {
+        "w": 443,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Ninja/Glide/Glide_006.png": {
+      "frame": {
+        "x": 270,
+        "y": 2,
+        "w": 410,
+        "h": 427
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 14,
+        "w": 410,
+        "h": 427
+      },
+      "sourceSize": {
+        "w": 443,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Ninja/Glide/Glide_008.png": {
+      "frame": {
+        "x": 259,
+        "y": 870,
+        "w": 410,
+        "h": 427
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 18,
+        "w": 410,
+        "h": 427
+      },
+      "sourceSize": {
+        "w": 443,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Ninja/Run/Run__004.png": {
+      "frame": {
+        "x": 673,
+        "y": 433,
+        "w": 352,
+        "h": 425
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8,
+        "y": 15,
+        "w": 352,
+        "h": 425
+      },
+      "sourceSize": {
+        "w": 363,
+        "h": 458
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Ninja/Jump/Jump__006.png": {
+      "frame": {
+        "x": 684,
+        "y": 2,
+        "w": 274,
+        "h": 425
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 42,
+        "y": 19,
+        "w": 274,
+        "h": 425
+      },
+      "sourceSize": {
+        "w": 362,
+        "h": 483
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Ninja/Throw/Throw__000.png": {
+      "frame": {
+        "x": 962,
+        "y": 2,
+        "w": 257,
+        "h": 425
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 97,
+        "y": 22,
+        "w": 257,
+        "h": 425
+      },
+      "sourceSize": {
+        "w": 377,
+        "h": 451
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Ninja/Attack/Attack__008.png": {
+      "frame": {
+        "x": 1223,
+        "y": 2,
+        "w": 416,
+        "h": 422
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 14,
+        "y": 31,
+        "w": 416,
+        "h": 422
+      },
+      "sourceSize": {
+        "w": 536,
+        "h": 495
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Ninja/Run/Run__003.png": {
+      "frame": {
+        "x": 1223,
+        "y": 422,
+        "w": 351,
+        "h": 420
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 8,
+        "w": 351,
+        "h": 420
+      },
+      "sourceSize": {
+        "w": 363,
+        "h": 458
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Ninja/Jump/Jump__007.png": {
+      "frame": {
+        "x": 1223,
+        "y": 777,
+        "w": 301,
+        "h": 420
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 21,
+        "y": 17,
+        "w": 301,
+        "h": 420
+      },
+      "sourceSize": {
+        "w": 362,
+        "h": 483
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Ninja/Run/Run__008.png": {
+      "frame": {
+        "x": 1223,
+        "y": 1082,
+        "w": 316,
+        "h": 403
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 30,
+        "y": 7,
+        "w": 316,
+        "h": 403
+      },
+      "sourceSize": {
+        "w": 363,
+        "h": 458
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Ninja/Jump_Throw/Jump_Throw__001.png": {
+      "frame": {
+        "x": 673,
+        "y": 862,
+        "w": 301,
+        "h": 408
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 50,
+        "y": 16,
+        "w": 301,
+        "h": 408
+      },
+      "sourceSize": {
+        "w": 360,
+        "h": 431
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Ninja/Jump/Jump__004.png": {
+      "frame": {
+        "x": 2,
+        "y": 876,
+        "w": 253,
+        "h": 432
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 43,
+        "y": 19,
+        "w": 253,
+        "h": 432
+      },
+      "sourceSize": {
+        "w": 362,
+        "h": 483
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Ninja/Jump/Jump__005.png": {
+      "frame": {
+        "x": 2,
+        "y": 876,
+        "w": 253,
+        "h": 432
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 43,
+        "y": 19,
+        "w": 253,
+        "h": 432
+      },
+      "sourceSize": {
+        "w": 362,
+        "h": 483
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    }
+  },
+  "meta": {
+    "app": "http://free-tex-packer.com",
+    "version": "0.6.7",
+    "image": "Ninja-7.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 2048,
+      "h": 2047
+    },
+    "scale": 1
+  }
+}

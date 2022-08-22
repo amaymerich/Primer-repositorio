@@ -25,7 +25,11 @@ export const assets=
     {url: "./https://fonts.googleapis.com/css2?family=DynaPuff&family=Rubik+Dirt&display=swap", name: "google?"},
     {url: "./Fonts/DynaPuff-Bold.ttf",name: "MiFuente"},
     {url: "./Fonts/DynaPuff-Bold.fnt",name: "DynaPuff"},
-    {url: "./Fonts/BRLNSB.fnt",name: "br"}
+    {url: "./Fonts/BRLNSB.fnt",name: "br"},
+
+    {url: "./spritesheet/Ninja-0.json", name: "spritesheet0"},
+    {url: "./spritesheet/Ninja-0.png", name: "Ninja spritesheet0"},
+
   
 ];
 
