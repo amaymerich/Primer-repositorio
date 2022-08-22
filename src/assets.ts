@@ -21,8 +21,11 @@ export const assets=
     {url: "./PNG/White/2x/minus.png",name: "minus"},
     {url: "./PNG/White/2x/plus.png",name: "plus"},
     
-    {url: "./Music/Desert Brawl - Vans in Japan.mp3",name: "sound"}
-        
-
+    {url: "./Music/Desert Brawl - Vans in Japan.mp3",name: "sound"},
+    {url: "./https://fonts.googleapis.com/css2?family=DynaPuff&family=Rubik+Dirt&display=swap", name: "google?"},
+    {url: "./Fonts/DynaPuff-Bold.ttf",name: "MiFuente"},
+    {url: "./Fonts/DynaPuff-Bold.fnt",name: "DynaPuff"},
+    {url: "./Fonts/BRLNSB.fnt",name: "br"}
+  
 ];
 
