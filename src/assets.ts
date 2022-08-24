@@ -16,10 +16,10 @@ export const assets=
     {url: "./Platform/Tiles/BGTile (3).png",name: "F3"},
     {url: "./Platform/Tiles/BGTile (5).png",name: "F4"},
     {url: "./Platform/Tiles/Tile (15).png",name: "Platform"},*/
-    {url: "./PNG/White/2x/musicOff.png",name: "musicOff"},
-    {url: "./PNG/White/2x/musicOn.png",name: "musicOn"},
-    {url: "./PNG/White/2x/minus.png",name: "minus"},
-    {url: "./PNG/White/2x/plus.png",name: "plus"},
+    {url: "./Ninja/White/2x/musicOff.png",name: "musicOff"},
+    {url: "./Ninja/White/2x/musicOn.png",name: "musicOn"},
+    {url: "./Ninja/White/2x/minus.png",name: "minus"},
+    {url: "./Ninja/White/2x/plus.png",name: "plus"},
     
     {url: "./Music/Desert Brawl - Vans in Japan.mp3",name: "sound"},
     {url: "./https://fonts.googleapis.com/css2?family=DynaPuff&family=Rubik+Dirt&display=swap", name: "google?"},

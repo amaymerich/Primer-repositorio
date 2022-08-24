@@ -1,7 +1,9 @@
-import { Application, Loader} from 'pixi.js'
-import { assets } from './Assets';
-import { SpritesheetScene } from './scenes.ts/SpritesheetScene';
-import { Keyboard } from './UIDemo/Keyboard';
+import { Application, Loader, Ticker } from "pixi.js";
+import { Group } from "tweedle.js";
+import { assets } from "./assets";
+import { AnimationScene } from "./scenes.ts/AnimationScene";
+import { Keyboard } from "./UIDemo/Keyboard";
+
 
 //Aplicaion de pxi que renderiza por nosotros
 export const WIDTH=1920;
@@ -62,15 +64,13 @@ Loader.shared.add(assets);
 	//const myScene = new SoundScene();
 	//const myScene = new TextScene();
 	//app.stage.addChild(myScene);
+	const myScene = new AnimationScene();
+	app.stage.addChild(myScene);
 
-	Loader.shared.onComplete.add(()=>{
-		const myScene = new SpritesheetScene();
+	Ticker.shared.add(function (frame: number){
+		Group.shared.update();
+		myScene.update(frame);
+	});
 
-		app.stage.addChild(myScene);
-		/*Ticker.shared.add(function (deltaFrame){
-			myScene.update(Ticker.shared.deltaMS, deltaFrame);
-		});*/
-	
-});
 
 Loader.shared.load();

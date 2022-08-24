@@ -19,22 +19,22 @@ export class SoundScene extends Container implements IUpdateable {
         const btnMusicOn = new Button(Texture.from("musicOn"));
         btnMusicOn.position.set(200,150);
         btnMusicOn.on(Button.CLICKED_EVENT, this.musicSound, this);
-        allCont.addChild(btnMusicOn);
+      //  allCont.addChild(btnMusicOn);
           
         const btnVolumeUp = new Button(Texture.from("plus"));
         btnVolumeUp.position.set(400,150);
         btnVolumeUp.on(Button.CLICKED_EVENT, this.volumeUp, this);
-        allCont.addChild(btnVolumeUp);
+        //allCont.addChild(btnVolumeUp);
        
         const btnVolumeDown = new Button(Texture.from("minus"));
         btnVolumeDown.position.set(400,250);
         btnVolumeDown.on(Button.CLICKED_EVENT, this.volumeDown, this);
-        allCont.addChild(btnVolumeDown);
+       // allCont.addChild(btnVolumeDown);
 
         const toggleMute = new Button(Texture.from("musicOn"), Texture.from("musicOff"));
         toggleMute.position.set(200,250);
         toggleMute.on(Button.CLICKED_EVENT, this.toggleMute, this);
-        allCont.addChild(toggleMute);
+       // allCont.addChild(toggleMute);
     }
     public toggleMute(_mute:boolean) {
         /*if (unMute) 
