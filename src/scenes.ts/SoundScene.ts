@@ -1,7 +1,7 @@
 import { sound } from "@pixi/sound";
 import { Container, Texture } from "pixi.js";
 import { Button } from "../ui/Button";
-import { IUpdateable } from "./IUpdateable";
+import { IUpdateable } from "../UIDemo/IUpdateable";
 
 
 export class SoundScene extends Container implements IUpdateable {
