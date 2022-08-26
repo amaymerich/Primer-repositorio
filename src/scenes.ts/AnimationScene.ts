@@ -5,7 +5,8 @@ import { StateAnimation } from "../game/StateAnimation";
 export class AnimationScene extends Container {
 
     private NinjaSprite:StateAnimation;
-    constructor() {
+    constructor() 
+    {
         super();
 
         this.NinjaSprite = new StateAnimation();
@@ -55,9 +56,9 @@ export class AnimationScene extends Container {
             "Ninja/Idle/Idle__009.png"
         ])
 
-        this.NinjaSprite.playState("run", true);
-        this.NinjaSprite.playState("jump", false);
-        this.NinjaSprite.playState("idle", false);
+        this.NinjaSprite.playState("run", false);
+        this.NinjaSprite.playState("jump", true);
+        this.NinjaSprite.playState("idle", true);
     }
 
     public update(frame:number)

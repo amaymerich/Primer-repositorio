@@ -1,6 +1,6 @@
 {
   "frames": {
-    "png/Jump_Attack__006.png": {
+    "ninjagirlnew/Jump_Attack/Jump_Attack__006.png": {
       "frame": {
         "x": 2,
         "y": 2,
@@ -24,7 +24,7 @@
         "y": 0.5
       }
     },
-    "png/Jump_Attack__007.png": {
+    "ninjagirlnew/Jump_Attack/Jump_Attack__007.png": {
       "frame": {
         "x": 2,
         "y": 547,
@@ -48,7 +48,7 @@
         "y": 0.5
       }
     },
-    "png/Jump_Attack__005.png": {
+    "ninjagirlnew/Jump_Attack/Jump_Attack__005.png": {
       "frame": {
         "x": 2,
         "y": 1092,
@@ -360,7 +360,7 @@
         "y": 0.5
       }
     },
-    "png/Glide_000.png": {
+    "ninjagirlnew/Glide/Glide_000.png": {
       "frame": {
         "x": 491,
         "y": 2,
@@ -408,7 +408,7 @@
         "y": 0.5
       }
     },
-    "png/Jump_Attack__009.png": {
+    "ninjagirlnew/Jump_Attack/Jump_Attack__009.png": {
       "frame": {
         "x": 916,
         "y": 415,
@@ -720,7 +720,7 @@
         "y": 0.5
       }
     },
-    "png/Jump_Attack__003.png": {
+    "ninjagirlnew/Jump_Attack/Jump_Attack__003.png": {
       "frame": {
         "x": 916,
         "y": 1085,
@@ -768,7 +768,7 @@
         "y": 0.5
       }
     },
-    "png/Jump_Throw__008.png": {
+    "ninjagirlnew/Jump_Throw/Jump_Throw__008.png": {
       "frame": {
         "x": 1593,
         "y": 1604,
@@ -1032,92 +1032,68 @@
         "y": 0.5
       }
     },
-    "Platform/Tiles/Fence (1).png": {
+    "Ninja/Coin.png": {
       "frame": {
         "x": 1853,
         "y": 1914,
-        "w": 124,
-        "h": 156
-      },
-      "rotated": true,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 132,
-        "y": 100,
-        "w": 124,
-        "h": 156
-      },
-      "sourceSize": {
-        "w": 256,
-        "h": 256
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "Ninja/Black/1x/contrast.png": {
-      "frame": {
-        "x": 2013,
-        "y": 1914,
-        "w": 32,
-        "h": 33
-      },
-      "rotated": true,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 8,
-        "y": 9,
-        "w": 32,
-        "h": 33
-      },
-      "sourceSize": {
-        "w": 50,
-        "h": 50
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "Ninja/Black/1x/zoom.png": {
-      "frame": {
-        "x": 2013,
-        "y": 1950,
-        "w": 32,
-        "h": 33
-      },
-      "rotated": true,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 10,
-        "y": 10,
-        "w": 32,
-        "h": 33
-      },
-      "sourceSize": {
-        "w": 50,
-        "h": 50
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "Ninja/Black/2x/exclamation.png": {
-      "frame": {
-        "x": 2013,
-        "y": 1986,
-        "w": 16,
-        "h": 60
+        "w": 119,
+        "h": 129
       },
       "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 119,
+        "h": 129
+      },
+      "sourceSize": {
+        "w": 119,
+        "h": 129
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Ninja/Black/2x/video.png": {
+      "frame": {
+        "x": 1976,
+        "y": 1914,
+        "w": 64,
+        "h": 70
+      },
+      "rotated": true,
       "trimmed": true,
       "spriteSourceSize": {
-        "x": 42,
-        "y": 24,
-        "w": 16,
-        "h": 60
+        "x": 16,
+        "y": 14,
+        "w": 64,
+        "h": 70
+      },
+      "sourceSize": {
+        "w": 100,
+        "h": 100
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Ninja/White/2x/video.png": {
+      "frame": {
+        "x": 1976,
+        "y": 1982,
+        "w": 64,
+        "h": 70
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 16,
+        "y": 14,
+        "w": 64,
+        "h": 70
       },
       "sourceSize": {
         "w": 100,
@@ -1872,7 +1848,7 @@
         "y": 0.5
       }
     },
-    "Platform/Tiles/Fence (3).png": {
+    "Platform/Tiles/Fence (1).png": {
       "frame": {
         "x": 1832,
         "y": 1475,
@@ -1882,7 +1858,7 @@
       "rotated": true,
       "trimmed": true,
       "spriteSourceSize": {
-        "x": 0,
+        "x": 132,
         "y": 100,
         "w": 124,
         "h": 156
@@ -2088,7 +2064,7 @@
         "y": 0.5
       }
     },
-    "png/Kunai.png": {
+    "ninjagirlnew/Kunai.png": {
       "frame": {
         "x": 1861,
         "y": 262,
@@ -2232,7 +2208,7 @@
         "y": 0.5
       }
     },
-    "Ninja/White/2x/exclamation.png": {
+    "Ninja/Black/2x/exclamation.png": {
       "frame": {
         "x": 1983,
         "y": 314,

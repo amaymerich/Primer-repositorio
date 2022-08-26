@@ -6,7 +6,7 @@ export class TweenScene extends Container {
     public xd:number = 0;
     constructor() {
         super();
-        const star = Sprite.from("Ninja/White/2x/star.png");
+        const star = Sprite.from("spritesheet/Ninja/coin.png");
        // star.anchor.set(1);
         star.x = 0;
         star.y = 0;
